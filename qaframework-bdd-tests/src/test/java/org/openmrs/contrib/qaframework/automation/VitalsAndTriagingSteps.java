@@ -34,8 +34,8 @@ public class VitalsAndTriagingSteps extends Steps {
 	private EditVitalsPage editVitalsPage;
 
 	@Before(RunTest.HOOK.SELENIUM_VITALS)
-	public void visitPatientDashboard() {
-		initiateWithLogin();
+	public void visitPatientDashboard() throws Exception {
+		goToHomePage();
 		testPatient = createTestPatient();
 		findPatientPage = (FindPatientPage) homePage.goToFindPatientRecord().waitForPage();
 		findPatientPage.enterPatient(testPatient.identifier);

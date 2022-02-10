@@ -34,8 +34,8 @@ public class FormSteps extends Steps {
 	private HtmlFormsPage htmlFormsPage;
 	
 	@Before(RunTest.HOOK.SELENIUM_FORM)
-	public void visitDashboard() {
-		initiateWithLogin();
+	public void visitDashboard() throws Exception {
+		goToHomePage();
 		manageForm = new ManageFormsPage(driver);	
 	}
 	

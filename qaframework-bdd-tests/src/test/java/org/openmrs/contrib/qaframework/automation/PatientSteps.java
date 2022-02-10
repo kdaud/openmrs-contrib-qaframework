@@ -41,8 +41,8 @@ public class PatientSteps extends Steps {
 	private TestPatient patient;
 
 	@Before(RunTest.HOOK.SELENIUM_PATIENT)
-	public void visitHomePage() {
-		initiateWithLogin();
+	public void visitHomePage() throws Exception {
+		goToHomePage();
 	}
 
 	@After(RunTest.HOOK.SELENIUM_PATIENT)

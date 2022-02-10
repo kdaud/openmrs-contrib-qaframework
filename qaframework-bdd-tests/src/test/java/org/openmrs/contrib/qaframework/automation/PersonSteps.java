@@ -42,8 +42,8 @@ public class PersonSteps extends Steps {
     private final String PERSON_FAMILY_NAME = RandomStringUtils.randomAlphanumeric(8);
 	
     @Before(RunTest.HOOK.SELENIUM_PERSON)
-    public void setUp() {
-        initiateWithLogin();
+    public void setUp() throws Exception {
+        goToHomePage();
         personInfo = TestData.generateRandomPerson();
         personUuid = TestData.createPerson(personInfo);
     }

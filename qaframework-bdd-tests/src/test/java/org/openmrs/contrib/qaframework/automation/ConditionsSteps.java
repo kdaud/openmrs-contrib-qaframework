@@ -33,8 +33,8 @@ public class ConditionsSteps extends Steps {
     private TestData.PatientInfo testPatient;
 
     @Before(RunTest.HOOK.SELENIUM_CONDITION)
-    public void visitDashboard() {     
-        initiateWithLogin();
+    public void visitDashboard() throws Exception {
+        goToHomePage();
         testPatient = createTestPatient();
         findPatientPage = homePage.goToFindPatientRecord();
         findPatientPage.enterPatient(testPatient.identifier);

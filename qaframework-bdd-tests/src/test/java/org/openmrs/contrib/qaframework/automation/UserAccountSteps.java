@@ -36,8 +36,8 @@ public class UserAccountSteps extends Steps {
 	private ManageUserAccountPage userAccountPage;
 
 	@Before(RunTest.HOOK.SELENIUM_USER_ACCOUNT)
-	public void visitHomePage() {
-		initiateWithLogin();
+	public void visitHomePage() throws Exception {
+		goToHomePage();
 	}
 
 	@After(RunTest.HOOK.SELENIUM_USER_ACCOUNT)

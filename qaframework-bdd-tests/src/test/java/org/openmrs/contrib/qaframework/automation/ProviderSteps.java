@@ -36,8 +36,8 @@ public class ProviderSteps extends Steps {
     private ProviderPage providerPage;
 	
     @Before(RunTest.HOOK.SELENIUM_PROVIDER)
-    public void setUp() {
-    	initiateWithLogin();
+    public void setUp() throws Exception {
+    	goToHomePage();
     	person = TestData.generateRandomPerson();
     	personUuid = TestData.createPerson(this.person);
     	TestData.createPerson(this.person);

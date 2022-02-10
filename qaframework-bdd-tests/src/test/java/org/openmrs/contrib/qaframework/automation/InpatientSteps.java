@@ -28,8 +28,8 @@ public class InpatientSteps extends Steps {
 	private TestData.PatientInfo testPatient;
 
 	@Before(RunTest.HOOK.SELENIUM_ENCOUNTER)
-	public void visitHomePage() {
-		initiateWithLogin();
+	public void visitHomePage() throws Exception {
+		goToHomePage();
 		testPatient = createTestPatient();
 	}
 

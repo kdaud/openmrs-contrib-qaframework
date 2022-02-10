@@ -43,8 +43,8 @@ public class RolesAndPrivilegesSteps extends Steps {
 	private final String ROLE_NAME = RandomStringUtils.randomAlphabetic(10);
 	
     @Before(RunTest.HOOK.SELENIUM_ROLES_AND_PRIVILEGES)
-    public void visitDashboard() {
-	initiateWithLogin();
+    public void visitDashboard() throws Exception {
+	goToHomePage();
     }
 	
     @After(RunTest.HOOK.SELENIUM_ROLES_AND_PRIVILEGES)

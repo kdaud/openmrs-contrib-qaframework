@@ -27,8 +27,8 @@ public class ReportSteps extends Steps {
 	private static final String END_DATE = "20/06/2020";
 
 	@Before(RunTest.HOOK.SELENIUM_REPORT)
-	public void visitHomePage() {
-		initiateWithLogin();
+	public void visitHomePage() throws Exception {
+		goToHomePage();
 	}
 
 	@After(RunTest.HOOK.SELENIUM_REPORT)

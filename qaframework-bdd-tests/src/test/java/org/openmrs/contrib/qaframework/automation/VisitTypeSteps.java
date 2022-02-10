@@ -35,8 +35,8 @@ public class VisitTypeSteps extends Steps {
     private static final String VISIT_TYPE_DESCRIPTION = "Description for Visit Type test workflow";
 
     @Before(RunTest.HOOK.SELENIUM_VISIT_TYPE)
-    public void setUp() {
-        initiateWithLogin();
+    public void setUp() throws Exception {
+        goToHomePage();
     }
 
     @After(RunTest.HOOK.SELENIUM_VISIT_TYPE)

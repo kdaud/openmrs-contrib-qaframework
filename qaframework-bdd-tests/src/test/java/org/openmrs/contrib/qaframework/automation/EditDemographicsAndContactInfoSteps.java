@@ -34,8 +34,8 @@ public class EditDemographicsAndContactInfoSteps extends Steps {
 	private RegistrationEditSectionPage registrationEditSectionPage;
 
 	@Before(RunTest.HOOK.SELENIUM_PATIENT_DEMOGRAPHICS)
-	public void visitPatientDashboard() {
-		initiateWithLogin();
+	public void visitPatientDashboard() throws Exception {
+		goToHomePage();
 		prefix = RandomStringUtils.randomAlphanumeric(6);
 		testPatient = createTestPatient();
 		new TestData.TestVisit(testPatient.uuid, TestData.getAVisitType(), getLocationUuid(homePage)).create();

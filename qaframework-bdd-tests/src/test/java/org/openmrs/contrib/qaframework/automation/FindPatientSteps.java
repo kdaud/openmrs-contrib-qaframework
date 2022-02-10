@@ -27,8 +27,8 @@ public class FindPatientSteps extends Steps {
 	private TestData.PatientInfo testPatient;
 
 	@Before(RunTest.HOOK.SELENIUM_FIND_PATIENT)
-	public void systemLogin() {	
-		initiateWithLogin();
+	public void systemLogin() throws Exception {	
+		goToHomePage();
 		testPatient = createTestPatient();
 	}
 

@@ -97,4 +97,10 @@ public class Steps extends ReferenceApplicationTestBase {
 		});
 		assertTrue(ids.contains(trimPatientId(patientId)));
 	}
+	
+	protected void goToHomePage() throws Exception {
+		goToLoginPage();
+		loginPage = getLoginPage();
+		loginPage.login("clerk", "Clerk123", "Registration Desk");
+	}
 }
