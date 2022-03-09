@@ -6,7 +6,7 @@
     "/static/css/*": "/static/css/",
     "/static/js/*": "/static/js/",
     "/static/java/*": "/static/java/",
-    "/**": "https://qa-refapp.openmrs.org/openmrs"
+    "/*": "https://qa-refapp.openmrs.org/openmrs"
   },
   "clean_urls": true,
   "https_only": true
