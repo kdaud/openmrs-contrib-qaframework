@@ -1,10 +1,10 @@
-name: Platform Upgrade
+name: Platform Testing Installation
 on:
-  workflow_dispatch:
   push:
-    branches: [master]
+    branches: [ master ]
   repository_dispatch:
     types: [qa]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,7 +25,6 @@ jobs:
           repository: openmrs/openmrs-core
       - name: build platform
         run: |
-          pwd
           mvn clean install -DskipTests=true
           cp webapp/target/openmrs.war ../
       - name: Checkout qaframework
@@ -36,8 +35,7 @@ jobs:
         run: |
           cp ../openmrs.war docker/
           cd docker
-          curl https://raw.githubusercontent.com/openmrs/openmrs-contrib-ansible-docker-compose/master/files/uat-platform/dbdump/dump.sql --output dump.sql
-          docker-compose -f docker-compose-platform-upgrade.yml up -d
+          docker-compose -f docker-compose-platform-install.yml up -d
       - name: wait for openmrs instance to start
         run: while ! nc -z localhost 8080 </dev/null; do sleep 1; done
       - name: Run qaframework on selenium
@@ -46,5 +44,5 @@ jobs:
           echo "cucumber.publish.enabled=true" > src/test/resources/cucumber.properties
           mvn clean install -DskipTests=true
           cp -f src/test/resources/org/openmrs/uitestframework/test-local.properties src/test/resources/org/openmrs/uitestframework/test.properties
-          npm run coreUpgrade
+          npm run testingCoreInstall
           curl -sX POST -F messages=@target/cucumber.ndjson https://studio.cucumber.io/cucumber_project/results -H "project-access-token: ${{secrets.CUCUMBER_IO_TOKEN}}" -H "provider: github" -H "repo: ${{github.repository}}" -H "branch: master" -H "revision: ${{github.sha}}"
