@@ -48,6 +48,6 @@ public class TestingInstallSteps extends InitialSetupSteps {
 
 	@Then("System should run Testing installation")
 	public void waitToFinish() {
-		initialSetupPage.waitForSetupToComplete();
+		//initialSetupPage.waitForSetupToComplete();
 	}
 }
