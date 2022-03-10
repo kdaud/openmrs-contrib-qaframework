@@ -20,7 +20,7 @@ import org.openmrs.contrib.qaframework.RunTest;
 import org.openmrs.contrib.qaframework.helper.InitialSetupPage;
 
 public class TestingInstallSteps extends InitialSetupSteps {
-	
+
 	@Before(RunTest.HOOK.SELENIUM_INITIAL_SETUP + " and "+ RunTest.HOOK.TESTING_INSTALL)
 	public void init() {
 		initialSetup();
@@ -48,6 +48,6 @@ public class TestingInstallSteps extends InitialSetupSteps {
 
 	@Then("System should run Testing installation")
 	public void waitToFinish() {
-		waitForSetupCompletion();
+		initialSetupPage.waitForSetupToComplete();
 	}
 }
