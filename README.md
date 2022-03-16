@@ -1,4 +1,4 @@
-# QA Dashboard: Project Status
+# QA Dashboard: Project Test Status
 ___
 ## Platform (core)
 
