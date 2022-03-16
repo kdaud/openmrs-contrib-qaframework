@@ -16,7 +16,7 @@ Install & Upgrade Tests |
 
 ## Reference Application
 
-2.x RefApp Workflow Tests |
+2.x RefApp Workflow Tests | 
 ------------- |
 [All Chrome Tests](https://ci.openmrs.org/browse/CONTRIB-QA) ![Build Status](https://ci.openmrs.org/plugins/servlet/wittified/build-status/CONTRIB-QA)
 [![All Firefox Tests](https://github.com/openmrs/openmrs-contrib-qaframework/actions/workflows/qa.yml/badge.svg?branch=master)](https://github.com/openmrs/openmrs-contrib-qaframework/actions/workflows/qa.yml)
