@@ -24,7 +24,8 @@ glue = "org.openmrs.contrib.qaframework.automation", plugin = {
 public class RunTest {
 
 	public class HOOK {
-		public static final String LOGIN = "@login";
+		public static final String LOGIN = "@login"; 
+		
 		public static final String CONDITION = "@condition";
 		public static final String SELENIUM = "@selenium";
 		public static final String FORM = "@form";
