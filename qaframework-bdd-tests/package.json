@@ -20,6 +20,7 @@
     "refapp2Form": "mvn test -Dcucumber.filter.tags='@selenium and @form'",
     "refapp2Service": "mvn test -Dcucumber.filter.tags='@selenium and @service'",
     "refapp2Patient": "mvn test -Dcucumber.filter.tags='@selenium and @patient'",
+    "refapp2Location": "mvn test -Dcucumber.filter.tags='@selenium and @location'",
     "refapp2PatientEncounter": "mvn test -Dcucumber.filter.tags='@selenium and @patientEncounter'",
     "refapp2Allergy": "mvn test -Dcucumber.filter.tags='@selenium and @allergies'",
     "refapp2Report": "mvn test -Dcucumber.filter.tags='@selenium and @report'",
